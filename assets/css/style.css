@@ -3006,3 +3006,186 @@ body.light-theme .sidebar-info .title-affiliation {
     line-height: 1.5;
   }
 }
+
+
+/* =========================================================
+   SITE-WIDE VISUAL REFRESH — atmospheric gradients & motion
+   Applied consistently across About, Resume, Publications and Contact.
+   ========================================================= */
+
+:root {
+  --accent-champagne: #e5c27c;
+  --accent-violet: #a78bfa;
+  --accent-teal: #69cbb7;
+  --surface-dark: #202024;
+  --surface-dark-2: #29282e;
+  --surface-light: #fffdf8;
+}
+
+/* Subtle ambient colour behind the content without changing the layout */
+body:not(.light-theme) {
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(167,139,250,.075), transparent 34%),
+    radial-gradient(ellipse at 88% 30%, rgba(105,203,183,.055), transparent 32%),
+    radial-gradient(ellipse at 50% 92%, rgba(229,194,124,.045), transparent 38%);
+  background-attachment: fixed;
+}
+
+/* Shared card language */
+article[data-page] .content-card,
+article[data-page] .service-item,
+article[data-page] .publication-item,
+article[data-page] .contact-form,
+article[data-page] .contact-info,
+article[data-page] .skills-list,
+article[data-page] .theme-contact-item {
+  position: relative;
+  border: 1px solid rgba(220,210,190,.12);
+  border-radius: 20px;
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, background .28s ease;
+}
+
+body:not(.light-theme) article[data-page] .content-card,
+body:not(.light-theme) article[data-page] .service-item,
+body:not(.light-theme) article[data-page] .publication-item,
+body:not(.light-theme) article[data-page] .contact-form,
+body:not(.light-theme) article[data-page] .contact-info,
+body:not(.light-theme) article[data-page] .skills-list,
+body:not(.light-theme) article[data-page] .theme-contact-item {
+  background: linear-gradient(145deg, rgba(43,42,48,.98), rgba(31,31,35,.98));
+  box-shadow: 0 12px 32px rgba(0,0,0,.16);
+}
+
+body.light-theme article[data-page] .content-card,
+body.light-theme article[data-page] .service-item,
+body.light-theme article[data-page] .publication-item,
+body.light-theme article[data-page] .contact-form,
+body.light-theme article[data-page] .contact-info,
+body.light-theme article[data-page] .skills-list,
+body.light-theme article[data-page] .theme-contact-item {
+  background: linear-gradient(145deg, #fffefa, #f5f1e8);
+  border-color: rgba(155,121,68,.18);
+  box-shadow: 0 10px 26px rgba(58,48,31,.07);
+}
+
+/* Hover lift and restrained coloured edge */
+@media (hover: hover) and (pointer: fine) {
+  article[data-page] .content-card:hover,
+  article[data-page] .service-item:hover,
+  article[data-page] .publication-item:hover,
+  article[data-page] .contact-form:hover,
+  article[data-page] .contact-info:hover,
+  article[data-page] .theme-contact-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(229,194,124,.48);
+    box-shadow: 0 18px 38px rgba(0,0,0,.20), 0 0 0 1px rgba(167,139,250,.08);
+  }
+  body.light-theme article[data-page] .content-card:hover,
+  body.light-theme article[data-page] .service-item:hover,
+  body.light-theme article[data-page] .publication-item:hover,
+  body.light-theme article[data-page] .contact-form:hover,
+  body.light-theme article[data-page] .contact-info:hover,
+  body.light-theme article[data-page] .theme-contact-item:hover {
+    box-shadow: 0 16px 32px rgba(77,62,39,.12), 0 0 0 1px rgba(185,154,102,.10);
+  }
+}
+
+/* About: service cards get a small multicolour accent glow */
+article[data-page="about"] .service-item {
+  overflow: hidden;
+}
+article[data-page="about"] .service-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(180deg, var(--accent-champagne), var(--accent-violet), var(--accent-teal));
+  opacity: .85;
+}
+
+/* Section headings: champagne-to-violet accent underline */
+article[data-page] .article-title::after {
+  background: linear-gradient(90deg, var(--accent-champagne), var(--accent-violet), var(--accent-teal)) !important;
+  border-radius: 99px;
+}
+
+/* Publications: metadata chips and link affordance */
+article[data-page="publications"] .publication-item {
+  overflow: hidden;
+}
+article[data-page="publications"] .publication-item a {
+  transition: color .2s ease, opacity .2s ease;
+}
+article[data-page="publications"] .publication-item a:hover {
+  color: var(--accent-champagne);
+}
+
+/* Resume: timeline nodes and skill fills */
+article[data-page="resume"] .timeline-item::before {
+  background: linear-gradient(135deg, var(--accent-champagne), var(--accent-violet));
+  box-shadow: 0 0 0 4px rgba(229,194,124,.12);
+}
+article[data-page="resume"] .skill-progress-fill {
+  background: linear-gradient(90deg, var(--accent-champagne), var(--accent-violet), var(--accent-teal)) !important;
+  border-radius: 99px;
+}
+
+/* Contact: refined fields and gradient action buttons */
+article[data-page="contact"] input,
+article[data-page="contact"] textarea {
+  border-radius: 12px;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+article[data-page="contact"] input:focus,
+article[data-page="contact"] textarea:focus {
+  border-color: rgba(229,194,124,.72);
+  box-shadow: 0 0 0 3px rgba(229,194,124,.12);
+}
+article[data-page="contact"] button,
+article[data-page="contact"] .form-btn {
+  background-image: linear-gradient(105deg, #b9955e, #d8b875 48%, #9b83d5) !important;
+  color: #211f20 !important;
+  border: 0;
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+article[data-page="contact"] button:hover,
+article[data-page="contact"] .form-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(185,149,94,.24);
+  filter: saturate(1.08);
+}
+
+/* Navigation gets a soft glass-like gradient */
+.navbar {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.navbar-link {
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+.navbar-link:hover {
+  color: var(--accent-champagne);
+  transform: translateY(-1px);
+}
+
+/* Keyboard accessibility and reduced-motion support */
+article[data-page] a:focus-visible,
+article[data-page] button:focus-visible,
+.navbar-link:focus-visible {
+  outline: 2px solid var(--accent-champagne);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  article[data-page] .content-card,
+  article[data-page] .service-item,
+  article[data-page] .publication-item,
+  article[data-page] .contact-form,
+  article[data-page] .contact-info,
+  .navbar-link {
+    transition: none !important;
+    transform: none !important;
+  }
+}
