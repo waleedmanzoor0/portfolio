@@ -108,3 +108,31 @@ navigationLinks.forEach((link) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+
+// Publications search and year filter
+const publicationSearch = document.querySelector("[data-publication-search]");
+const publicationYear = document.querySelector("[data-publication-year]");
+const publicationCards = Array.from(document.querySelectorAll("[data-publication-list] .publication-item"));
+const publicationResults = document.querySelector("[data-publication-results]");
+const publicationEmpty = document.querySelector("[data-publication-empty]");
+
+const filterPublications = function () {
+  const query = (publicationSearch?.value || "").trim().toLowerCase();
+  const year = publicationYear?.value || "all";
+  let visible = 0;
+
+  publicationCards.forEach((card) => {
+    const matchesQuery = !query || (card.textContent + " " + card.dataset.search).toLowerCase().includes(query);
+    const matchesYear = year === "all" || card.dataset.year === year;
+    const show = matchesQuery && matchesYear;
+    card.hidden = !show;
+    if (show) visible += 1;
+  });
+
+  if (publicationResults) publicationResults.textContent = `Showing ${visible} of ${publicationCards.length} publications`;
+  if (publicationEmpty) publicationEmpty.hidden = visible !== 0;
+};
+
+publicationSearch?.addEventListener("input", filterPublications);
+publicationYear?.addEventListener("change", filterPublications);
