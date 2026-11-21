@@ -3429,3 +3429,178 @@ body.light-theme article[data-page="contact"] .cv-download-btn {
     margin-left: 0;
   }
 }
+
+
+/* Mobile-only sidebar alignment fixes — desktop layout is unchanged */
+@media (max-width: 767px) {
+  .sidebar {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 16px;
+    overflow: hidden;
+  }
+
+  .sidebar.active {
+    max-height: 1100px;
+  }
+
+  .sidebar-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .sidebar-info .avatar-box {
+    flex: 0 0 76px;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .sidebar-info .avatar-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sidebar-info .info-content {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    text-align: left;
+  }
+
+  .sidebar-info .info-content .name {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 8px;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: clamp(17px, 5vw, 21px);
+    line-height: 1.2;
+  }
+
+  .sidebar-info .info-content .title {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 8px 9px;
+    text-align: left;
+    font-size: 11px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .sidebar-info .title-affiliation {
+    width: 100%;
+    margin-top: 6px;
+    padding-top: 6px;
+    font-size: 9px;
+    line-height: 1.45;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+
+  .sidebar-info .info_more-btn {
+    top: -20px;
+    right: -10px;
+    padding: 8px 10px;
+  }
+
+  .sidebar-info_more {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .sidebar-info_more .separator {
+    margin: 18px 0;
+  }
+
+  .sidebar .contacts-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .sidebar .contact-item > .icon-box {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .sidebar .contact-info {
+    flex: 1 1 0;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .sidebar .contact-info :is(.contact-link, time, address) {
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .sidebar .theme-toggle {
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  .sidebar .social-list {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .sidebar {
+    padding: 18px 13px;
+  }
+
+  .sidebar-info {
+    gap: 11px;
+  }
+
+  .sidebar-info .avatar-box {
+    flex-basis: 68px;
+    width: 68px;
+    height: 68px;
+  }
+
+  .sidebar-info .info-content .name {
+    font-size: 17px;
+  }
+
+  .sidebar-info .info-content .title {
+    padding: 7px 8px;
+    font-size: 10px;
+  }
+
+  .sidebar-info .title-affiliation {
+    font-size: 8px;
+  }
+}
