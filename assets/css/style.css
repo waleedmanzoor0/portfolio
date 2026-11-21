@@ -2872,3 +2872,24 @@ body.light-theme .service-icon-box ion-icon {
 body.light-theme .service-icon-box .service-svg-icon {
   color: #b58b43;
 }
+
+
+/* Champagne-gold gradient treatment for the sidebar name */
+.info-content .name {
+  background: linear-gradient(105deg, #f2e5c9 0%, #d8c29a 42%, #b9955e 72%, #ead9b7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  padding-bottom: 2px;
+  filter: drop-shadow(0 1px 7px rgba(216,194,154,0.10));
+}
+body.light-theme .info-content .name {
+  background-image: linear-gradient(105deg, #765a32 0%, #a98248 42%, #c3a36f 72%, #806238 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: none;
+}
