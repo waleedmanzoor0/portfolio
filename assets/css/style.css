@@ -3260,3 +3260,172 @@ body.light-theme article[data-page="about"] .service-item .service-icon-box {
     transition: transform .25s ease;
   }
 }
+
+
+/* =========================================================
+   CONTACT SECTION — responsive, aligned form layout
+   ========================================================= */
+article[data-page="contact"] .cv-download-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 22px 26px;
+  margin-bottom: 26px;
+  border: 1px solid rgba(216,194,154,.22);
+  border-radius: 18px;
+  background: linear-gradient(125deg, rgba(216,194,154,.10), rgba(167,139,250,.055) 58%, rgba(105,203,183,.045));
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+}
+article[data-page="contact"] .cv-download-copy {
+  flex: 1 1 250px;
+  min-width: 0;
+}
+article[data-page="contact"] .cv-download-copy .h3 {
+  margin-bottom: 7px;
+}
+article[data-page="contact"] .cv-download-copy p {
+  color: var(--light-gray-70);
+  font-size: 13px;
+  line-height: 1.65;
+}
+article[data-page="contact"] .cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex: 0 1 auto;
+  min-height: 44px;
+  padding: 11px 17px;
+  border: 1px solid rgba(216,194,154,.30);
+  border-radius: 12px;
+  white-space: normal;
+  text-align: center;
+}
+article[data-page="contact"] .cv-download-btn:disabled {
+  opacity: .72;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  filter: none;
+}
+
+article[data-page="contact"] .contact-form {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: clamp(20px, 3.2vw, 32px);
+  margin: 0;
+  overflow: hidden;
+}
+article[data-page="contact"] .form-title {
+  margin-bottom: 22px;
+}
+article[data-page="contact"] .form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+article[data-page="contact"] .input-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+}
+article[data-page="contact"] .form-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  padding: 14px 16px;
+  border: 1px solid rgba(216,194,154,.20);
+  border-radius: 12px;
+  background: rgba(255,255,255,.035);
+  color: var(--white-2);
+  line-height: 1.5;
+}
+article[data-page="contact"] .form-input::placeholder {
+  color: var(--light-gray-70);
+  opacity: 1;
+}
+article[data-page="contact"] textarea.form-input {
+  width: 100%;
+  min-height: 155px;
+  height: 155px;
+  max-height: 320px;
+  margin: 0;
+  resize: vertical;
+}
+article[data-page="contact"] .form-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: fit-content;
+  min-width: 165px;
+  min-height: 46px;
+  margin: 2px 0 0 auto;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+article[data-page="contact"] .form-btn:disabled {
+  opacity: .58;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  filter: none;
+}
+article[data-page="contact"] .form-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+  filter: none;
+}
+
+body.light-theme article[data-page="contact"] .cv-download-section {
+  background: linear-gradient(125deg, rgba(216,194,154,.22), rgba(167,139,250,.055) 58%, #fffefa);
+  border-color: rgba(155,121,68,.20);
+  box-shadow: 0 9px 24px rgba(58,48,31,.06);
+}
+body.light-theme article[data-page="contact"] .cv-download-copy p {
+  color: #625c52;
+}
+body.light-theme article[data-page="contact"] .form-input {
+  color: #302d28;
+  background: rgba(255,255,255,.78);
+  border-color: rgba(155,121,68,.24);
+}
+body.light-theme article[data-page="contact"] .form-input::placeholder {
+  color: #8a8378;
+}
+body.light-theme article[data-page="contact"] .cv-download-btn {
+  border-color: rgba(155,121,68,.28);
+}
+
+@media (max-width: 600px) {
+  article[data-page="contact"] .cv-download-section {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+    padding: 19px;
+  }
+  article[data-page="contact"] .cv-download-btn {
+    width: 100%;
+  }
+  article[data-page="contact"] .contact-form {
+    padding: 19px;
+  }
+  article[data-page="contact"] .input-wrapper {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+  article[data-page="contact"] .form {
+    gap: 13px;
+  }
+  article[data-page="contact"] .form-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
