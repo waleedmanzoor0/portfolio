@@ -2982,3 +2982,27 @@ body.light-theme .sidebar-info .title-affiliation {
   .sidebar-info .info-content .title { max-width: 260px; }
   .sidebar-info .title-affiliation { font-size: 8px; }
 }
+
+
+/* Improve affiliation readability and alignment within the profile title */
+.sidebar-info .info-content .title {
+  width: 100%;
+  max-width: 310px;
+  text-align: center;
+}
+.sidebar-info .title-affiliation {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 11px;
+  line-height: 1.55;
+  letter-spacing: 0.1px;
+  text-align: center;
+  text-wrap: balance;
+}
+@media (max-width: 580px) {
+  .sidebar-info .info-content .title { max-width: 290px; }
+  .sidebar-info .title-affiliation {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
