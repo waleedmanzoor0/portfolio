@@ -2532,3 +2532,149 @@ body.light-theme .publication-type { color: #725a32; background: rgba(155,121,68
   .cv-download-section { align-items: flex-start; flex-direction: column; padding: 19px; }
   .cv-download-btn { width: 100%; }
 }
+
+
+/*-----------------------------------*\\
+  #SCHOLARGPS RESEARCH PROFILE
+\\*-----------------------------------*/
+
+.research-profile {
+  margin: 30px 0;
+  padding: 25px;
+  border: 1px solid var(--accent-champagne-border, rgba(216,194,154,0.24));
+  border-radius: var(--card-radius, 18px);
+  background: linear-gradient(135deg, rgba(216,194,154,0.075), transparent 58%), rgba(255,255,255,0.018);
+}
+.research-profile-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.research-eyebrow {
+  margin-bottom: 7px;
+  color: var(--accent-champagne, #d8c29a);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.research-profile-heading .h3 { margin: 0; }
+.research-profile-id {
+  padding: 7px 10px;
+  color: var(--light-gray-70);
+  background: rgba(216,194,154,0.07);
+  border: 1px solid var(--accent-champagne-border, rgba(216,194,154,0.24));
+  border-radius: 8px;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.research-affiliation {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  margin-bottom: 18px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.065);
+  border-radius: 13px;
+}
+.research-affiliation > ion-icon {
+  flex: 0 0 auto;
+  color: var(--accent-champagne, #d8c29a);
+  font-size: 24px;
+}
+.research-affiliation .h4 {
+  margin-bottom: 5px;
+  color: var(--light-gray-70);
+  font-size: 11px;
+  font-weight: 500;
+}
+.research-affiliation p {
+  color: var(--white-2);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.research-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 19px;
+}
+.research-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 105px;
+  padding: 15px 8px;
+  text-align: center;
+  background: linear-gradient(145deg, rgba(216,194,154,0.10), transparent 75%), rgba(255,255,255,0.025);
+  border: 1px solid var(--accent-champagne-border, rgba(216,194,154,0.24));
+  border-radius: 13px;
+}
+.research-metric-value {
+  color: var(--accent-champagne, #d8c29a);
+  font-size: 29px;
+  line-height: 1.1;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.research-metric-label {
+  color: var(--light-gray-70);
+  font-size: 11px;
+}
+.research-specialties {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.research-specialty {
+  padding: 13px;
+  background: rgba(255,255,255,0.025);
+  border-radius: 11px;
+}
+.research-detail-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--light-gray-70);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.research-specialty p {
+  color: var(--white-2);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.research-metrics-note {
+  margin-top: 16px;
+  color: var(--light-gray-70);
+  font-size: 10px;
+  line-height: 1.5;
+}
+body.light-theme .research-profile {
+  background: linear-gradient(135deg, rgba(216,194,154,0.15), transparent 65%), #fffefa;
+  border-color: rgba(91,77,53,0.15);
+}
+body.light-theme .research-affiliation,
+body.light-theme .research-specialty {
+  background: rgba(155,121,68,0.055);
+  border-color: rgba(91,77,53,0.10);
+}
+body.light-theme .research-affiliation p,
+body.light-theme .research-specialty p { color: #302d28; }
+body.light-theme .research-metric {
+  background: linear-gradient(145deg, rgba(216,194,154,0.18), transparent 80%), #faf8f3;
+  border-color: rgba(155,121,68,0.22);
+}
+@media (max-width: 580px) {
+  .research-profile { padding: 19px; }
+  .research-metrics { gap: 7px; }
+  .research-metric { min-height: 90px; padding: 12px 5px; }
+  .research-metric-value { font-size: 25px; }
+  .research-metric-label { font-size: 10px; }
+  .research-specialties { grid-template-columns: 1fr; }
+}
