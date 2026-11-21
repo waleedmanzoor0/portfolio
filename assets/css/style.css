@@ -3189,3 +3189,26 @@ article[data-page] button:focus-visible,
     transform: none !important;
   }
 }
+
+
+/* Restore a clearly dark canvas by default; light mode remains opt-in */
+html, body {
+  min-height: 100%;
+}
+body:not(.light-theme) {
+  background-color: #101012 !important;
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(167,139,250,.09), transparent 36%),
+    radial-gradient(ellipse at 88% 30%, rgba(105,203,183,.065), transparent 34%),
+    radial-gradient(ellipse at 50% 100%, rgba(229,194,124,.055), transparent 40%),
+    linear-gradient(145deg, #17171b 0%, #101012 58%, #151412 100%) !important;
+  background-attachment: fixed;
+}
+body.light-theme {
+  background-color: #eeeae2 !important;
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(185,154,102,.10), transparent 36%),
+    radial-gradient(ellipse at 88% 30%, rgba(105,160,150,.055), transparent 34%),
+    linear-gradient(145deg, #f7f5f0 0%, #eeebe4 100%) !important;
+  background-attachment: fixed;
+}
