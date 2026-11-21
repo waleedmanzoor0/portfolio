@@ -2760,3 +2760,30 @@ body.light-theme .sidebar .icon-box::before {
 body.light-theme .sidebar .icon-box ion-icon {
   color: #8f6f3e;
 }
+
+
+/* Definitive light-mode override for the Resume skills card.
+   The original .content-card::before layer sits above the card background,
+   so both layers must be restyled for the light theme. */
+body.light-theme article[data-page="resume"] .skill ul.skills-list.content-card {
+  background: #e9dfcd !important;
+  border: 1px solid #d8c29a !important;
+  box-shadow: 0 10px 26px rgba(58,48,31,0.09) !important;
+  color: #302d28 !important;
+}
+body.light-theme article[data-page="resume"] .skill ul.skills-list.content-card::before {
+  background: #fffdf8 !important;
+  border: 1px solid rgba(155,121,68,0.12) !important;
+  opacity: 1 !important;
+}
+body.light-theme article[data-page="resume"] .skills-list .skills-item .title-wrapper h5,
+body.light-theme article[data-page="resume"] .skills-list .skills-item .title-wrapper data {
+  color: #39352e !important;
+}
+body.light-theme article[data-page="resume"] .skills-list .skill-progress-bg {
+  background: #e7e1d6 !important;
+  border: 1px solid rgba(91,77,53,0.10) !important;
+}
+body.light-theme article[data-page="resume"] .skills-list .skill-progress-fill {
+  background: linear-gradient(90deg, #d8c29a, #b99a66) !important;
+}
