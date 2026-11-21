@@ -2849,3 +2849,13 @@ body.light-theme article[data-page="resume"] .icon-box::before {
 body.light-theme .service-icon-box ion-icon {
   color: #b58b43;
 }
+
+
+/* Slightly bolder, more defined scientific service icons */
+.service-icon-box ion-icon {
+  font-size: 46px;
+  width: 46px;
+  height: 46px;
+  --ionicon-stroke-width: 2.5px;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.12));
+}
