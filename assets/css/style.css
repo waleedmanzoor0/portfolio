@@ -3604,3 +3604,91 @@ body.light-theme article[data-page="contact"] .cv-download-btn {
     font-size: 8px;
   }
 }
+
+
+/* Keep the complete profile header visible when the mobile sidebar is collapsed */
+@media (max-width: 767px) {
+  .sidebar {
+    max-height: 250px !important;
+    padding: 22px 16px 24px;
+    overflow: hidden;
+  }
+
+  .sidebar.active {
+    max-height: 1100px !important;
+  }
+
+  .sidebar-info {
+    min-height: 190px;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .sidebar-info .avatar-box {
+    flex: 0 0 82px;
+    width: 82px;
+    height: 82px;
+    align-self: center;
+  }
+
+  .sidebar-info .info-content {
+    align-self: center;
+  }
+
+  .sidebar-info .info-content .name {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .sidebar-info .info-content .title {
+    max-width: none;
+    padding: 10px 11px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .sidebar-info .title-affiliation {
+    margin-top: 8px;
+    padding-top: 8px;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .sidebar-info .info_more-btn {
+    top: -22px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .sidebar {
+    max-height: 255px !important;
+    padding: 20px 13px 23px;
+  }
+
+  .sidebar-info {
+    min-height: 200px;
+    gap: 10px;
+  }
+
+  .sidebar-info .avatar-box {
+    flex-basis: 70px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .sidebar-info .info-content .title {
+    padding: 9px 8px;
+    font-size: 10px;
+  }
+
+  .sidebar-info .title-affiliation {
+    font-size: 9px;
+    line-height: 1.45;
+  }
+}
