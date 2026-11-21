@@ -2913,3 +2913,39 @@ body.light-theme .info-content .name {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+/* Distinct institutional affiliation beneath the profile role */
+.sidebar-info .affiliation {
+  max-width: 290px;
+  margin: 11px auto 0;
+  padding: 9px 12px 0;
+  border-top: 1px solid rgba(216,194,154,0.42);
+  color: #d8c29a;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: 0.12px;
+  text-align: center;
+}
+.sidebar-info .affiliation span {
+  display: block;
+  color: var(--light-gray-70);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+body.light-theme .sidebar-info .affiliation {
+  color: #94713f;
+  border-top-color: rgba(155,121,68,0.38);
+}
+body.light-theme .sidebar-info .affiliation span {
+  color: #756b5d;
+}
+@media (max-width: 580px) {
+  .sidebar-info .affiliation {
+    max-width: 100%;
+    font-size: 9px;
+  }
+  .sidebar-info .affiliation span { font-size: 8px; }
+}
