@@ -2859,3 +2859,16 @@ body.light-theme .service-icon-box ion-icon {
   --ionicon-stroke-width: 2.5px;
   filter: drop-shadow(0 1px 1px rgba(0,0,0,0.12));
 }
+
+
+/* Inline microscope artwork: reliable across icon-font versions */
+.service-icon-box .service-svg-icon {
+  display: block;
+  width: 46px;
+  height: 46px;
+  color: #e3bd63;
+  overflow: visible;
+}
+body.light-theme .service-icon-box .service-svg-icon {
+  color: #b58b43;
+}
