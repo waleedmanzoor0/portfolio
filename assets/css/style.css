@@ -2787,3 +2787,37 @@ body.light-theme article[data-page="resume"] .skills-list .skill-progress-bg {
 body.light-theme article[data-page="resume"] .skills-list .skill-progress-fill {
   background: linear-gradient(90deg, #d8c29a, #b99a66) !important;
 }
+
+
+/* Match Resume section corner treatment to the rounded sidebar icon tiles */
+article[data-page="resume"] .icon-box {
+  border-radius: 12px;
+  overflow: hidden;
+}
+article[data-page="resume"] .icon-box::before {
+  border-radius: 9px;
+}
+article[data-page="resume"] .content-card {
+  border-radius: 20px;
+}
+article[data-page="resume"] .content-card::before {
+  border-radius: 18px;
+}
+article[data-page="resume"] .skills-list {
+  border-radius: 20px;
+}
+article[data-page="resume"] .skills-list::before {
+  border-radius: 18px;
+}
+body.light-theme article[data-page="resume"] .icon-box {
+  background: #e9e2d5;
+  border: 1px solid rgba(155,121,68,0.30);
+  border-radius: 12px;
+  box-shadow: 0 5px 14px rgba(58,48,31,0.10);
+}
+body.light-theme article[data-page="resume"] .icon-box::before {
+  inset: 2px;
+  background: #fffefa;
+  border: 1px solid rgba(155,121,68,0.10);
+  border-radius: 9px;
+}
