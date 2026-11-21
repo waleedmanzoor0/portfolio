@@ -3905,3 +3905,37 @@ article[data-page="contact"] .cv-download-copy > .h3 {
     letter-spacing: -0.02em;
   }
 }
+
+
+/* Independent sidebar scrolling on wide desktop layouts */
+@media (min-width: 1250px) {
+  .sidebar {
+    position: sticky;
+    top: 30px;
+    align-self: start;
+    height: auto;
+    max-height: calc(100vh - 60px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(216,194,154,.48) transparent;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: rgba(216,194,154,.42);
+    border-radius: 10px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(216,194,154,.72);
+  }
+}
