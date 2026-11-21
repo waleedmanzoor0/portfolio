@@ -149,8 +149,8 @@ const updateThemeToggle = function () {
   themeToggle.setAttribute("aria-pressed", isLight ? "true" : "false");
   themeToggle.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
   themeToggle.innerHTML = isLight
-    ? '<ion-icon name="moon-outline" aria-hidden="true"></ion-icon><span>Dark</span>'
-    : '<ion-icon name="sunny-outline" aria-hidden="true"></ion-icon><span>Light</span>';
+    ? '<ion-icon name="moon-outline" aria-hidden="true"></ion-icon><span>Dark mode</span>'
+    : '<ion-icon name="sunny-outline" aria-hidden="true"></ion-icon><span>Light mode</span>';
 };
 
 updateThemeToggle();
