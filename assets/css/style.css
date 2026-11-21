@@ -3692,3 +3692,59 @@ body.light-theme article[data-page="contact"] .cv-download-btn {
     line-height: 1.45;
   }
 }
+
+
+/* Crisp custom scientific SVG icons for Research Areas */
+article[data-page="about"] .service-item .service-icon-box {
+  width: 62px;
+  height: 62px;
+  min-width: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+article[data-page="about"] .service-item .research-icon {
+  display: block;
+  width: 39px;
+  height: 39px;
+  overflow: visible;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+article[data-page="about"] .service-item:nth-child(1) .service-icon-box {
+  color: #f1c66e;
+  background: linear-gradient(145deg, rgba(241,198,110,.22), rgba(241,198,110,.07));
+  border: 1px solid rgba(241,198,110,.24);
+}
+article[data-page="about"] .service-item:nth-child(2) .service-icon-box {
+  color: #b7a3ff;
+  background: linear-gradient(145deg, rgba(183,163,255,.23), rgba(183,163,255,.07));
+  border: 1px solid rgba(183,163,255,.24);
+}
+article[data-page="about"] .service-item:nth-child(3) .service-icon-box {
+  color: #70d5bd;
+  background: linear-gradient(145deg, rgba(112,213,189,.22), rgba(112,213,189,.07));
+  border: 1px solid rgba(112,213,189,.24);
+}
+body.light-theme article[data-page="about"] .service-item .service-icon-box {
+  box-shadow: 0 5px 14px rgba(70,58,40,.07);
+}
+@media (hover: hover) and (pointer: fine) {
+  article[data-page="about"] .service-item:hover .service-icon-box {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(0,0,0,.16);
+  }
+}
+@media (max-width: 580px) {
+  article[data-page="about"] .service-item .service-icon-box {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+  }
+  article[data-page="about"] .service-item .research-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
