@@ -2678,3 +2678,24 @@ body.light-theme .research-metric {
   .research-metric-label { font-size: 10px; }
   .research-specialties { grid-template-columns: 1fr; }
 }
+
+
+/* Champagne-gold framed profile avatar */
+.avatar-box {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #d8c29a;
+  box-shadow: 0 0 0 3px rgba(216,194,154,0.12), 0 7px 22px rgba(0,0,0,0.24);
+}
+.avatar-box img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 50%;
+}
+body.light-theme .avatar-box {
+  border-color: #b99a66;
+  box-shadow: 0 0 0 3px rgba(185,154,102,0.13), 0 7px 22px rgba(58,48,31,0.12);
+}
