@@ -136,3 +136,26 @@ const filterPublications = function () {
 
 publicationSearch?.addEventListener("input", filterPublications);
 publicationYear?.addEventListener("change", filterPublications);
+
+
+// Accessible light/dark theme toggle with saved preference
+const themeToggle = document.querySelector("[data-theme-toggle]");
+const savedTheme = localStorage.getItem("portfolio-theme");
+if (savedTheme === "light") document.body.classList.add("light-theme");
+
+const updateThemeToggle = function () {
+  if (!themeToggle) return;
+  const isLight = document.body.classList.contains("light-theme");
+  themeToggle.setAttribute("aria-pressed", isLight ? "true" : "false");
+  themeToggle.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
+  themeToggle.innerHTML = isLight
+    ? '<ion-icon name="moon-outline" aria-hidden="true"></ion-icon><span>Dark</span>'
+    : '<ion-icon name="sunny-outline" aria-hidden="true"></ion-icon><span>Light</span>';
+};
+
+updateThemeToggle();
+themeToggle?.addEventListener("click", function () {
+  const isLight = document.body.classList.toggle("light-theme");
+  localStorage.setItem("portfolio-theme", isLight ? "light" : "dark");
+  updateThemeToggle();
+});
