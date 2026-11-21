@@ -2949,3 +2949,36 @@ body.light-theme .sidebar-info .affiliation span {
   }
   .sidebar-info .affiliation span { font-size: 8px; }
 }
+
+
+/* Affiliation now sits inside the same role/title box */
+.sidebar-info .affiliation { display: none !important; }
+.sidebar-info .info-content .title {
+  display: block;
+  width: fit-content;
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.45;
+}
+.sidebar-info .title-affiliation {
+  display: block;
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(216,194,154,0.48);
+  color: #d8c29a;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+body.light-theme .sidebar-info .title-affiliation {
+  color: #806238;
+  border-top-color: rgba(155,121,68,0.42);
+}
+@media (max-width: 580px) {
+  .sidebar-info .info-content .title { max-width: 260px; }
+  .sidebar-info .title-affiliation { font-size: 8px; }
+}
