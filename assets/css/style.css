@@ -3748,3 +3748,101 @@ body.light-theme article[data-page="about"] .service-item .service-icon-box {
     height: 35px;
   }
 }
+
+
+/* Research cards: consistent, compact horizontal layout on phones only */
+@media (max-width: 767px) {
+  article[data-page="about"] .service-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    width: 100%;
+  }
+
+  article[data-page="about"] .service-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
+    min-width: 0;
+    min-height: 116px;
+    box-sizing: border-box;
+    padding: 18px 17px 18px 20px;
+    text-align: left;
+  }
+
+  article[data-page="about"] .service-item::after {
+    top: 15px;
+    bottom: 15px;
+  }
+
+  article[data-page="about"] .service-item .service-icon-box {
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    margin: 0;
+    border-radius: 15px;
+  }
+
+  article[data-page="about"] .service-item .research-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  article[data-page="about"] .service-content-box {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    text-align: left;
+  }
+
+  article[data-page="about"] .service-item-title {
+    margin: 0 0 6px;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  article[data-page="about"] .service-item-text {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  article[data-page="about"] .service-list {
+    gap: 12px;
+  }
+
+  article[data-page="about"] .service-item {
+    gap: 12px;
+    min-height: 108px;
+    padding: 15px 13px 15px 17px;
+  }
+
+  article[data-page="about"] .service-item .service-icon-box {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 13px;
+  }
+
+  article[data-page="about"] .service-item .research-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  article[data-page="about"] .service-item-title {
+    font-size: 14px;
+  }
+
+  article[data-page="about"] .service-item-text {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
