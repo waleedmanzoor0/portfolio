@@ -2893,3 +2893,23 @@ body.light-theme .info-content .name {
   color: transparent;
   filter: none;
 }
+
+
+/* Keep the profile name and role centred beside the avatar */
+.sidebar-info .info-content {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+.sidebar-info .info-content .name {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.sidebar-info .info-content .title {
+  margin-left: auto;
+  margin-right: auto;
+}
