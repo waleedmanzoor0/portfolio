@@ -2821,3 +2821,31 @@ body.light-theme article[data-page="resume"] .icon-box::before {
   border: 1px solid rgba(155,121,68,0.10);
   border-radius: 9px;
 }
+
+
+/* Consistent scientific outline icons for the What I'm Doing cards */
+.service-icon-box {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 64px;
+}
+.service-icon-box ion-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  font-size: 44px;
+  color: #e3bd63;
+  --ionicon-stroke-width: 1.6px;
+}
+@media (min-width: 580px) {
+  .service-item .service-icon-box {
+    margin: 3px 0 0;
+  }
+}
+body.light-theme .service-icon-box ion-icon {
+  color: #b58b43;
+}
