@@ -4207,3 +4207,128 @@ body.light-theme .research-links-section, body.light-theme .contact-email-sectio
 body.light-theme .research-profile-link { background: rgba(255,255,255,.58); border-color: rgba(155,121,68,.18); }
 body.light-theme .research-profile-link-copy strong, body.light-theme .contact-email-section a { color: #302d28; }
 @media (max-width: 760px) { .research-links-grid { grid-template-columns: 1fr; } }
+
+
+/* HIGH VISIBILITY RESEARCHER PROFILE GRADIENT */
+article.about[data-page="about"] .research-links-section {
+  display: block !important;
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  padding: 28px !important;
+  margin: 30px 0 38px !important;
+  border: 1px solid #8d79d6 !important;
+  border-radius: 22px !important;
+  background: linear-gradient(120deg, #211641 0%, #28336d 48%, #125c63 100%) !important;
+  box-shadow: 0 18px 42px rgba(38, 27, 91, .30), inset 0 1px 0 rgba(255,255,255,.18) !important;
+}
+article.about[data-page="about"] .research-links-section::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(194, 145, 255, .42), transparent 38%),
+    radial-gradient(circle at 92% 88%, rgba(83, 231, 202, .30), transparent 42%) !important;
+}
+article.about[data-page="about"] .research-links-heading .h3 {
+  color: #f6d9a8 !important;
+  background: linear-gradient(90deg, #ffe0a8, #e1b8ff 52%, #91f0dc) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+article.about[data-page="about"] .research-links-heading p {
+  color: #f1edff !important;
+}
+article.about[data-page="about"] .research-links-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 13px !important;
+}
+article.about[data-page="about"] .research-profile-link {
+  min-height: 72px !important;
+  padding: 14px !important;
+  border: 1px solid rgba(235, 226, 255, .34) !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, rgba(255,255,255,.19), rgba(255,255,255,.07)) !important;
+  box-shadow: 0 8px 18px rgba(8, 10, 42, .20), inset 0 1px 0 rgba(255,255,255,.18) !important;
+}
+article.about[data-page="about"] .research-profile-link:nth-child(3n+1) {
+  background: linear-gradient(135deg, rgba(160, 116, 255, .34), rgba(255,255,255,.08)) !important;
+}
+article.about[data-page="about"] .research-profile-link:nth-child(3n+2) {
+  background: linear-gradient(135deg, rgba(70, 160, 230, .34), rgba(255,255,255,.08)) !important;
+}
+article.about[data-page="about"] .research-profile-link:nth-child(3n) {
+  background: linear-gradient(135deg, rgba(49, 198, 171, .30), rgba(255,255,255,.08)) !important;
+}
+article.about[data-page="about"] .research-profile-link:hover,
+article.about[data-page="about"] .research-profile-link:focus-visible {
+  transform: translateY(-4px) !important;
+  border-color: #f4d69d !important;
+  box-shadow: 0 14px 26px rgba(5, 8, 34, .28), 0 0 0 1px rgba(244,214,157,.24) !important;
+}
+article.about[data-page="about"] .research-profile-link-icon {
+  color: #ffe0a8 !important;
+  background: linear-gradient(145deg, rgba(193,151,255,.48), rgba(74,221,195,.30)) !important;
+  border: 1px solid rgba(255,255,255,.28) !important;
+}
+article.about[data-page="about"] .research-profile-link-copy strong {
+  color: #ffffff !important;
+}
+article.about[data-page="about"] .research-profile-link-copy small,
+article.about[data-page="about"] .research-profile-link-arrow {
+  color: #e7e4ff !important;
+}
+body.light-theme article.about[data-page="about"] .research-links-section {
+  border-color: #b8a3e9 !important;
+  background: linear-gradient(120deg, #eee5ff 0%, #e5edff 48%, #dcf7ef 100%) !important;
+  box-shadow: 0 15px 34px rgba(95, 74, 145, .15), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+body.light-theme article.about[data-page="about"] .research-links-section::before {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(174, 128, 255, .28), transparent 38%),
+    radial-gradient(circle at 92% 88%, rgba(64, 190, 164, .22), transparent 42%) !important;
+}
+body.light-theme article.about[data-page="about"] .research-links-heading .h3 {
+  background: linear-gradient(90deg, #8753b9, #5267bd 52%, #238c7b) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+body.light-theme article.about[data-page="about"] .research-links-heading p {
+  color: #4d4660 !important;
+}
+body.light-theme article.about[data-page="about"] .research-profile-link {
+  border-color: rgba(103, 83, 153, .24) !important;
+  background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(237,231,255,.82)) !important;
+  box-shadow: 0 7px 17px rgba(72, 58, 110, .10) !important;
+}
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n+1) {
+  background: linear-gradient(135deg, #f0e5ff, #ffffff) !important;
+}
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n+2) {
+  background: linear-gradient(135deg, #e4edff, #ffffff) !important;
+}
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n) {
+  background: linear-gradient(135deg, #def7f0, #ffffff) !important;
+}
+body.light-theme article.about[data-page="about"] .research-profile-link-copy strong {
+  color: #30264a !important;
+}
+body.light-theme article.about[data-page="about"] .research-profile-link-copy small,
+body.light-theme article.about[data-page="about"] .research-profile-link-arrow {
+  color: #615873 !important;
+}
+@media (max-width: 760px) {
+  article.about[data-page="about"] .research-links-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 520px) {
+  article.about[data-page="about"] .research-links-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
