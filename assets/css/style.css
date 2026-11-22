@@ -4332,3 +4332,76 @@ body.light-theme article.about[data-page="about"] .research-profile-link-arrow {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* Refined Researcher Profiles: restore panel, warm gradient cards and matching headings */
+article.about[data-page="about"] .research-links-section {
+  background: linear-gradient(135deg, rgba(216,194,154,.07), rgba(167,139,250,.035) 62%, rgba(105,203,183,.025)) !important;
+  border: 1px solid rgba(216,194,154,.20) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.10) !important;
+}
+article.about[data-page="about"] .research-links-section::before {
+  display: none !important;
+}
+article.about[data-page="about"] .research-links-heading .h3,
+article.about[data-page="about"] .featured-research-heading .h3 {
+  display: inline-block !important;
+  width: fit-content;
+  max-width: 100%;
+  background: var(--heading-gradient) !important;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+article.about[data-page="about"] .research-links-heading p {
+  color: var(--light-gray) !important;
+}
+article.about[data-page="about"] .research-profile-link,
+article.about[data-page="about"] .research-profile-link:nth-child(3n+1),
+article.about[data-page="about"] .research-profile-link:nth-child(3n+2),
+article.about[data-page="about"] .research-profile-link:nth-child(3n) {
+  border: 1px solid rgba(255,220,185,.42) !important;
+  background: linear-gradient(115deg, #f6d56f 0%, #ffad62 48%, #b99aff 100%) !important;
+  box-shadow: 0 7px 18px rgba(113,77,99,.18), inset 0 1px 0 rgba(255,255,255,.40) !important;
+}
+article.about[data-page="about"] .research-profile-link:hover,
+article.about[data-page="about"] .research-profile-link:focus-visible {
+  transform: translateY(-3px) !important;
+  border-color: rgba(255,255,255,.85) !important;
+  box-shadow: 0 12px 24px rgba(113,77,99,.24), 0 0 0 2px rgba(255,190,125,.18) !important;
+}
+article.about[data-page="about"] .research-profile-link-icon {
+  color: #573b57 !important;
+  background: rgba(255,255,255,.36) !important;
+  border: 1px solid rgba(255,255,255,.48) !important;
+}
+article.about[data-page="about"] .research-profile-link-copy strong {
+  color: #33253f !important;
+}
+article.about[data-page="about"] .research-profile-link-copy small,
+article.about[data-page="about"] .research-profile-link-arrow {
+  color: #51405c !important;
+}
+body.light-theme article.about[data-page="about"] .research-links-section {
+  background: linear-gradient(135deg, rgba(216,194,154,.10), rgba(167,139,250,.045) 62%, rgba(105,203,183,.035)) !important;
+  border-color: rgba(155,121,68,.20) !important;
+  box-shadow: 0 8px 22px rgba(58,48,31,.055) !important;
+}
+body.light-theme article.about[data-page="about"] .research-profile-link,
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n+1),
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n+2),
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n) {
+  background: linear-gradient(115deg, #f6d56f 0%, #ffad62 48%, #b99aff 100%) !important;
+  border-color: rgba(255,255,255,.72) !important;
+}
+@media (max-width: 580px) {
+  article.about[data-page="about"] .research-links-heading .h3,
+  article.about[data-page="about"] .featured-research-heading .h3 {
+    letter-spacing: -0.02em;
+  }
+}
