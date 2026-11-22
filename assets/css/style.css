@@ -4437,3 +4437,35 @@ body.light-theme article.about[data-page="about"] .research-profile-link:nth-chi
     rgba(255,173,98,.25) 48%,
     rgba(185,154,255,.30) 100%) !important;
 }
+
+
+/* Restore strong readable contrast on soft-gradient researcher cards */
+article.about[data-page="about"] .research-profile-link-copy strong {
+  color: #30233f !important;
+  font-weight: 750 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.38) !important;
+}
+article.about[data-page="about"] .research-profile-link-copy small {
+  color: #453650 !important;
+  font-weight: 600 !important;
+}
+article.about[data-page="about"] .research-profile-link-arrow {
+  color: #493653 !important;
+  opacity: .95 !important;
+}
+article.about[data-page="about"] .research-profile-link-icon {
+  color: #49305b !important;
+  background: rgba(255,255,255,.56) !important;
+  border: 1px solid rgba(255,255,255,.72) !important;
+}
+article.about[data-page="about"] .research-profile-link:hover .research-profile-link-copy strong,
+article.about[data-page="about"] .research-profile-link:focus-visible .research-profile-link-copy strong {
+  color: #21152f !important;
+}
+body:not(.light-theme) article.about[data-page="about"] .research-profile-link-copy strong {
+  color: #241832 !important;
+}
+body:not(.light-theme) article.about[data-page="about"] .research-profile-link-copy small,
+body:not(.light-theme) article.about[data-page="about"] .research-profile-link-arrow {
+  color: #382944 !important;
+}
