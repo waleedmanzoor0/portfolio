@@ -85,6 +85,14 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
+
+    const featuredPublicationsLink = document.querySelector("[data-open-publications]");
+    featuredPublicationsLink?.addEventListener("click", function (event) {
+      event.preventDefault();
+      const publicationsNav = Array.from(navigationLinks).find((link) => link.textContent.trim().toLowerCase() === "publications");
+      publicationsNav?.click();
+    });
+
 // Accessible page navigation
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
