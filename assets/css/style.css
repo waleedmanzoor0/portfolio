@@ -4405,3 +4405,35 @@ body.light-theme article.about[data-page="about"] .research-profile-link:nth-chi
     letter-spacing: -0.02em;
   }
 }
+
+
+/* Softer yellow–orange–purple gradient treatment for researcher profile cards */
+article.about[data-page="about"] .research-profile-link,
+article.about[data-page="about"] .research-profile-link:nth-child(3n+1),
+article.about[data-page="about"] .research-profile-link:nth-child(3n+2),
+article.about[data-page="about"] .research-profile-link:nth-child(3n) {
+  background: linear-gradient(115deg,
+    rgba(246,213,111,.22) 0%,
+    rgba(255,173,98,.19) 48%,
+    rgba(185,154,255,.22) 100%) !important;
+  border-color: rgba(216,194,154,.28) !important;
+  box-shadow: 0 5px 14px rgba(113,77,99,.09), inset 0 1px 0 rgba(255,255,255,.24) !important;
+}
+article.about[data-page="about"] .research-profile-link:hover,
+article.about[data-page="about"] .research-profile-link:focus-visible {
+  background: linear-gradient(115deg,
+    rgba(246,213,111,.34) 0%,
+    rgba(255,173,98,.30) 48%,
+    rgba(185,154,255,.34) 100%) !important;
+  border-color: rgba(216,194,154,.48) !important;
+  box-shadow: 0 9px 20px rgba(113,77,99,.14) !important;
+}
+body.light-theme article.about[data-page="about"] .research-profile-link,
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n+1),
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n+2),
+body.light-theme article.about[data-page="about"] .research-profile-link:nth-child(3n) {
+  background: linear-gradient(115deg,
+    rgba(246,213,111,.30) 0%,
+    rgba(255,173,98,.25) 48%,
+    rgba(185,154,255,.30) 100%) !important;
+}
