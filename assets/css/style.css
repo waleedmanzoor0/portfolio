@@ -4494,3 +4494,22 @@ article.about[data-page="about"] .research-profile-link-icon {
   background: rgba(255,255,255,.20) !important;
   border-color: rgba(255,255,255,.42) !important;
 }
+
+
+/* Prevent the sidebar email address from being clipped on desktop */
+@media (min-width: 768px) {
+  .contact-item .contact-info {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: calc(100% - 46px);
+  }
+
+  .contact-item .contact-link {
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.5;
+  }
+}
