@@ -4513,3 +4513,14 @@ article.about[data-page="about"] .research-profile-link-icon {
     line-height: 1.5;
   }
 }
+
+
+/* Keep Featured Research cards at their own content height when one study opens */
+article.about[data-page="about"] .featured-research-grid {
+  align-items: start !important;
+  grid-auto-rows: min-content !important;
+}
+article.about[data-page="about"] .featured-research-card {
+  align-self: start !important;
+  height: fit-content !important;
+}
